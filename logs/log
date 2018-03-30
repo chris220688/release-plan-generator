@@ -1,0 +1,225 @@
+INFO:root: [2018-03-30 19:32] __init__ ran with args: (<__main__.CmdGenerator object at 0x101f98ac8>,), and kwargs: {'app_modules': ['module_1', 'module_2'], 'conf_modules': ['module_1', 'module_2'], 'static_modules': ['module_1-static'], 'environment': 'staging'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'break_line': False, 'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] mkdir ran with args: ('/tmp/backup_dir/2018-03-30_1932/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'break_line': False, 'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] mkdir ran with args: ('/tmp/backup_dir/2018-03-30_1932/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'break_line': False, 'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] mkdir ran with args: ('/tmp/backup_dir/2018-03-30_1932/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/var/www/html/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] tar ran with args: ('/var/www/html/my_apps/webserver/static/module_1', '/tmp/backup_dir/2018-03-30_1932/module_1-static-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] tar ran with args: ('module_1', '/tmp/backup_dir/2018-03-30_1932/module_1-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] tar ran with args: ('module_2', '/tmp/backup_dir/2018-03-30_1932/module_2-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] tar ran with args: ('conf/module_1-conf', '/tmp/backup_dir/2018-03-30_1932/module_1-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] tar ran with args: ('conf/module_2-conf', '/tmp/backup_dir/2018-03-30_1932/module_2-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] tar ran with args: ('module_1', '/tmp/backup_dir/2018-03-30_1932/module_1-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] tar ran with args: ('module_2', '/tmp/backup_dir/2018-03-30_1932/module_2-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] tar ran with args: ('conf/module_1-conf', '/tmp/backup_dir/2018-03-30_1932/module_1-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] tar ran with args: ('conf/module_2-conf', '/tmp/backup_dir/2018-03-30_1932/module_2-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('./artifacts',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] scp ran with args: ('test_user', 'staging', 'staging_webserver_1', '*', '/tmp/backup_dir/2018-03-30_1932/'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] scp ran with args: ('test_user', 'staging', 'staging_appserver_1', '*', '/tmp/backup_dir/2018-03-30_1932/'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] scp ran with args: ('test_user', 'staging', 'staging_appserver_2', '*', '/tmp/backup_dir/2018-03-30_1932/'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] dbaccess ran with args: ('sql_script.sql',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/var/www/html/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_1-static.1.180.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_1-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_2-1.143.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_1-conf-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_2-conf-1.430.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_1-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_2-1.143.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_1-conf-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_2-conf-1.430.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/var/www/html/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_1-static-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_1-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_2-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_1-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_2-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_1-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_2-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_1-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:32] untar ran with args: ('/tmp/backup_dir/2018-03-30_1932/module_2-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] __init__ ran with args: (<__main__.CmdGenerator object at 0x1040b8f98>,), and kwargs: {'app_modules': ['module_1', 'module_2'], 'environment': 'staging', 'static_modules': ['module_1-static'], 'conf_modules': ['module_1', 'module_2']}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'break_line': False, 'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] mkdir ran with args: ('/tmp/backup_dir/2018-03-30_1937/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'break_line': False, 'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] mkdir ran with args: ('/tmp/backup_dir/2018-03-30_1937/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'break_line': False, 'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] mkdir ran with args: ('/tmp/backup_dir/2018-03-30_1937/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/var/www/html/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] tar ran with args: ('/var/www/html/my_apps/webserver/static/module_1', '/tmp/backup_dir/2018-03-30_1937/module_1-static-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] tar ran with args: ('module_1', '/tmp/backup_dir/2018-03-30_1937/module_1-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] tar ran with args: ('module_2', '/tmp/backup_dir/2018-03-30_1937/module_2-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] tar ran with args: ('conf/module_1-conf', '/tmp/backup_dir/2018-03-30_1937/module_1-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] tar ran with args: ('conf/module_2-conf', '/tmp/backup_dir/2018-03-30_1937/module_2-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] tar ran with args: ('module_1', '/tmp/backup_dir/2018-03-30_1937/module_1-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] tar ran with args: ('module_2', '/tmp/backup_dir/2018-03-30_1937/module_2-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] tar ran with args: ('conf/module_1-conf', '/tmp/backup_dir/2018-03-30_1937/module_1-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] tar ran with args: ('conf/module_2-conf', '/tmp/backup_dir/2018-03-30_1937/module_2-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('./artifacts',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] scp ran with args: ('test_user', 'staging', 'staging_webserver_1', '*', '/tmp/backup_dir/2018-03-30_1937/'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] scp ran with args: ('test_user', 'staging', 'staging_appserver_1', '*', '/tmp/backup_dir/2018-03-30_1937/'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] scp ran with args: ('test_user', 'staging', 'staging_appserver_2', '*', '/tmp/backup_dir/2018-03-30_1937/'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] dbaccess ran with args: ('sql_script.sql',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/var/www/html/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_1-static.1.180.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_1-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_2-1.143.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_1-conf-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_2-conf-1.430.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_1-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_2-1.143.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_1-conf-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_2-conf-1.430.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/var/www/html/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_1-static-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_1-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_2-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_1-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_2-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_1-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_2-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_1-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 19:37] untar ran with args: ('/tmp/backup_dir/2018-03-30_1937/module_2-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] __init__ ran with args: (<__main__.CmdGenerator object at 0x101e98a90>,), and kwargs: {'environment': 'staging', 'static_modules': ['module_1-static'], 'conf_modules': ['module_1', 'module_2'], 'app_modules': ['module_1', 'module_2']}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'output_file': './output/commands.txt', 'break_line': False}
+INFO:root: [2018-03-30 20:25] mkdir ran with args: ('/tmp/backup_dir/2018-03-30_2025/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'output_file': './output/commands.txt', 'break_line': False}
+INFO:root: [2018-03-30 20:25] mkdir ran with args: ('/tmp/backup_dir/2018-03-30_2025/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'output_file': './output/commands.txt', 'break_line': False}
+INFO:root: [2018-03-30 20:25] mkdir ran with args: ('/tmp/backup_dir/2018-03-30_2025/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/var/www/html/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] tar ran with args: ('/var/www/html/my_apps/webserver/static/module_1', '/tmp/backup_dir/2018-03-30_2025/module_1-static-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] tar ran with args: ('module_1', '/tmp/backup_dir/2018-03-30_2025/module_1-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] tar ran with args: ('module_2', '/tmp/backup_dir/2018-03-30_2025/module_2-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] tar ran with args: ('conf/module_1-conf', '/tmp/backup_dir/2018-03-30_2025/module_1-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] tar ran with args: ('conf/module_2-conf', '/tmp/backup_dir/2018-03-30_2025/module_2-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] tar ran with args: ('module_1', '/tmp/backup_dir/2018-03-30_2025/module_1-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] tar ran with args: ('module_2', '/tmp/backup_dir/2018-03-30_2025/module_2-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] tar ran with args: ('conf/module_1-conf', '/tmp/backup_dir/2018-03-30_2025/module_1-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] tar ran with args: ('conf/module_2-conf', '/tmp/backup_dir/2018-03-30_2025/module_2-conf-backup.tgz'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('./artifacts',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] scp ran with args: ('test_user', 'staging', 'staging_webserver_1', '*', '/tmp/backup_dir/2018-03-30_2025/'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] scp ran with args: ('test_user', 'staging', 'staging_appserver_1', '*', '/tmp/backup_dir/2018-03-30_2025/'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] scp ran with args: ('test_user', 'staging', 'staging_appserver_2', '*', '/tmp/backup_dir/2018-03-30_2025/'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] dbaccess ran with args: ('sql_script.sql',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/var/www/html/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_1-static.1.180.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_1-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_2-1.143.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_1-conf-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_2-conf-1.430.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_1-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_2-1.143.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_1-conf-1.181.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_2-conf-1.430.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_webserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/var/www/html/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_1-static-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_appserver_1'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_1-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_2-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_1-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_2-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] ssh ran with args: ('test_user', 'staging', 'staging_appserver_2'), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_1-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_2-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_1-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] cd ran with args: ('/opt/my_apps/',), and kwargs: {'output_file': './output/commands.txt'}
+INFO:root: [2018-03-30 20:25] untar ran with args: ('/tmp/backup_dir/2018-03-30_2025/module_2-conf-backup.tgz', ''), and kwargs: {'output_file': './output/commands.txt'}

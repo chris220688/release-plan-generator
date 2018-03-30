@@ -1,0 +1,145 @@
+
+==========================
+Friday Tickets
+==========================
+
+
+==========================
+Modules (5)
+==========================
+
+module_1-static
+module_1
+module_2
+module_1-conf
+module_2-conf
+
+==========================
+Database (1)
+==========================
+
+sql_script.sql
+
+==========================
+Artifacts (5)
+==========================
+
+module_1-static.1.180.tgz
+module_2-1.143.tgz
+module_1-conf-1.181.tgz
+module_1-1.181.tgz
+module_2-conf-1.430.tgz
+
+==========================
+Create backup directories
+==========================
+
+ssh test_user@staging-staging_webserver_1 mkdir /tmp/backup_dir/2018-03-30_2025/ 
+ssh test_user@staging-staging_appserver_1 mkdir /tmp/backup_dir/2018-03-30_2025/ 
+ssh test_user@staging-staging_appserver_2 mkdir /tmp/backup_dir/2018-03-30_2025/ 
+
+==========================
+Backup webserver statics
+==========================
+
+ssh test_user@staging-staging_webserver_1 
+cd /var/www/html/my_apps/ 
+tar -cvzf /tmp/backup_dir/2018-03-30_2025/module_1-static-backup.tgz /var/www/html/my_apps/webserver/static/module_1 
+
+==========================
+Backup app-server modules
+==========================
+
+ssh test_user@staging-staging_appserver_1 
+cd /opt/my_apps/ 
+tar -cvzf /tmp/backup_dir/2018-03-30_2025/module_1-backup.tgz module_1 
+cd /opt/my_apps/ 
+tar -cvzf /tmp/backup_dir/2018-03-30_2025/module_2-backup.tgz module_2 
+cd /opt/my_apps/ 
+tar -cvzf /tmp/backup_dir/2018-03-30_2025/module_1-conf-backup.tgz conf/module_1-conf 
+cd /opt/my_apps/ 
+tar -cvzf /tmp/backup_dir/2018-03-30_2025/module_2-conf-backup.tgz conf/module_2-conf 
+
+ssh test_user@staging-staging_appserver_2 
+cd /opt/my_apps/ 
+tar -cvzf /tmp/backup_dir/2018-03-30_2025/module_1-backup.tgz module_1 
+cd /opt/my_apps/ 
+tar -cvzf /tmp/backup_dir/2018-03-30_2025/module_2-backup.tgz module_2 
+cd /opt/my_apps/ 
+tar -cvzf /tmp/backup_dir/2018-03-30_2025/module_1-conf-backup.tgz conf/module_1-conf 
+cd /opt/my_apps/ 
+tar -cvzf /tmp/backup_dir/2018-03-30_2025/module_2-conf-backup.tgz conf/module_2-conf 
+
+
+==========================
+scp artifacts
+==========================
+
+cd ./artifacts 
+scp * test_user@staging-staging_webserver_1:/tmp/backup_dir/2018-03-30_2025/
+scp * test_user@staging-staging_appserver_1:/tmp/backup_dir/2018-03-30_2025/
+scp * test_user@staging-staging_appserver_2:/tmp/backup_dir/2018-03-30_2025/
+
+==========================
+Run SQL scripts
+==========================
+
+dbaccess $DB_ALIAS sql_script.sql 2>&1 | tee sql_script.sql.log
+
+==========================
+Deploy artifacts
+==========================
+
+ssh test_user@staging-staging_webserver_1 
+cd /var/www/html/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_1-static.1.180.tgz 
+
+ssh test_user@staging-staging_appserver_1 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_1-1.181.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_2-1.143.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_1-conf-1.181.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_2-conf-1.430.tgz 
+
+ssh test_user@staging-staging_appserver_2 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_1-1.181.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_2-1.143.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_1-conf-1.181.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_2-conf-1.430.tgz 
+
+
+==========================
+Rollback plan
+==========================
+
+ssh test_user@staging-staging_webserver_1 
+cd /var/www/html/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_1-static-backup.tgz 
+
+ssh test_user@staging-staging_appserver_1 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_1-backup.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_2-backup.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_1-conf-backup.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_2-conf-backup.tgz 
+
+ssh test_user@staging-staging_appserver_2 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_1-backup.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_2-backup.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_1-conf-backup.tgz 
+cd /opt/my_apps/ 
+tar zxvf /tmp/backup_dir/2018-03-30_2025/module_2-conf-backup.tgz 
+
