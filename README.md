@@ -36,7 +36,7 @@ For now it only generates an output with commands, but it shouldn't be very comp
 Python3 is required to run this application.
 
 
-### USAGE
+### Usage
 
 1. Make sure you have set up the environment, boxes and modules configuration files to serve your specific environment.
 
