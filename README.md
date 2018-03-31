@@ -18,12 +18,12 @@ The steps it performs are listed below:
 1. Instantiates an environment with boxes and modules (as per configuration files)
 2. Parses the artifacts from the 'artifacts' directory and matches them to the modules
 3. Generates linux commands for the following tasks:
-	a. Create backup directories in the remote boxes
-	b. Take backups of the modules to be deployed
-	c. Transfer the artifacts to the remote boxes
-	d. Deploy the artifacts
-	e. Run any SQL scripts
-	f. Rollback the release
+	* Create backup directories in the remote boxes
+	* Take backups of the modules to be deployed
+	* Transfer the artifacts to the remote boxes
+	* Deploy the artifacts
+	* Run any SQL scripts
+	* Rollback the release
 4. Dumbs the commands in the 'output' directory
 
 Although it might look a bit too specific, I tried to make it as abstract as possible so that it can be used for different environments with only a few alterations (mainly in the configuration files).
